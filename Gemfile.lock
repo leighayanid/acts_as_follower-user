@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/tcocca/acts_as_follower.git
+  revision: c5ac7b9601c4af01eb4d9112330b27be4d694ecc
+  specs:
+    acts_as_follower (0.2.1)
+      activerecord (>= 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -38,7 +45,6 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    acts_as_follower (0.2.1)
     arel (7.1.4)
     autoprefixer-rails (7.1.1)
       execjs
@@ -162,7 +168,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  acts_as_follower
+  acts_as_follower!
   bootstrap-sass
   byebug
   coffee-rails (~> 4.2)

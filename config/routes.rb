@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'home/index'
   root 'users#index'
-  devise_for :users
+  devise_for :users, controllers: {}
   resources :users, only: [:index, :show] do
 		resources :follows, only: [:create, :destroy]
 	end

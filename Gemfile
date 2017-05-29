@@ -50,4 +50,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 gem 'bootstrap-sass'
-gem 'acts_as_follower'
+gem "acts_as_follower", github: "tcocca/acts_as_follower"

@@ -1,9 +1,11 @@
 <div class="container">
 	<div class="col-md-6">
+		<h3>Users</h3>
 		<ul class="list-group">
 			<% @users.each do |user| %>
 				<li class="list-group-item">
 					<h4><%= user.email %></h4>
+					<h5><%= link_to 'Show', user_path(user) %></h5>
 				</li>
 			<% end %>	
 		</ul>

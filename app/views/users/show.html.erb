@@ -2,15 +2,20 @@
 	<div class="col-md-6 col-md-offset-3">
 		<div class="panel panel-default">
 			<div class="panel-body">
-				<%= image_tag @user.gravatar_url, class: 'img-rounded', style: "height:200px;width:200px;" %>
-				<h3><%= @user.email %></h3>
+				<%= image_tag @user.gravatar_url, class: 'img-rounded' %>
+				<h3 class="text-center"><%= @user.full_name %></h3>
+				<h5 class="text-center">@<%= @user.username %></h5>
+				<h5 class="text-center"><%= @user.email %></h5>
+				<% if @user == current_user %>
+					<%= link_to 'Edit Profile', edit_user_registration_path %>	
+				<% end %>
 				<% unless @user == current_user %>
 					<% if current_user.following?(@user) %>
 						<%= button_to 'Unfollow', user_follow_path(@user, current_user.get_follow(@user).id), method: :delete, class: 'btn btn-default' %>
 					<% else %>		
 						<%= button_to 'Follow', user_follows_path(@user), class: 'btn btn-default' %>
 					<% end %>
-				<% end %>	
+				<% end %>
 			</div>
 		</div>
 	</div>
